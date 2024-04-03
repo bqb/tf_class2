@@ -21,3 +21,4 @@ resource "azurerm_resource_group" "rgs" {
     location = var.region
     tags = var.tags
 }
+
