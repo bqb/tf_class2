@@ -1,3 +1,4 @@
+# variables.tf
 variable "rg_names" {
     type = list(string)
 }
@@ -16,3 +17,6 @@ variable tags {
     type = map
 }
 
+variable vnets {
+  type = list(map(string))
+}
