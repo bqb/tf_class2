@@ -18,6 +18,6 @@ resource "azurerm_resource_group" "geomeoso_rg" {
     name = "geomeoso"
     location = "westus2"
 
-    tags = {"cost center" = " Ryans Wallet" }
+    tags = {"cost center" = " Pauls Wallet" }
 }
 
