@@ -14,18 +14,10 @@ provider "azurerm" {
     features {}
 }
 
-# Create main resource group for geomeoso
-resource "azurerm_resource_group" "geomeoso_rg" {
-    name = "${var.prefix}_rg"
+# Create list-driven resource groups for geomeoso
+resource "azurerm_resource_group" "rgs" {
+    count = length(var.rg_names)
+    name = "${var.prefix}_${var.rg_names[count.index]}"
     location = var.region
     tags = var.tags
-
-}
-
-# Create dev resource group for geomeoso
-resource "azurerm_resource_group" "geomeoso_dev_rg" {
-    name = "${var.prefix}_dev_rg"
-    location = var.region
-    tags = var.tags
-
 }

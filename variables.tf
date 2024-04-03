@@ -1,4 +1,11 @@
-variable prefix {}
+variable "rg_names" {
+    type = list(string)
+}
+
+variable prefix {
+    type = string
+    default = "geomeoso"
+}
 
 variable region {
     type = string
