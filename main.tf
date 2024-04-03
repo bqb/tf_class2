@@ -1,3 +1,12 @@
+# test out some local variables
+locals {
+    prefix = "geomeoso"
+    region = "westus2"
+    tags = {
+        cost_center = "Pauls wallet"
+    }
+}
+
 # Specifiy the provider and version
 terraform {
     required_providers {
@@ -13,13 +22,18 @@ provider "azurerm" {
     features {}
 }
 
-# Create the very first resource group for geomeoso
+# Create main resource group for geomeoso
 resource "azurerm_resource_group" "geomeoso_rg" {
-    name = "geomeoso"
-    location = "westus2"
+    name = "${local.prefix}_rg"
+    location = local.region
+    tags = local.tags
 
-    tags = {
-        "cost center" = " Pauls Wallet" 
-        "class day" = "second"
-    } 
+}
+
+# Create dev resource group for geomeoso
+resource "azurerm_resource_group" "geomeoso_dev_rg" {
+    name = "${local.prefix}_dev_rg"
+    location = local.region
+    tags = local.tags
+
 }
