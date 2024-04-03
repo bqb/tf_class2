@@ -13,11 +13,13 @@ provider "azurerm" {
     features {}
 }
 
-# Create the very first resource
+# Create the very first resource group for geomeoso
 resource "azurerm_resource_group" "geomeoso_rg" {
     name = "geomeoso"
     location = "westus2"
 
-    tags = {"cost center" = " Pauls Wallet" }
+    tags = {
+        "cost center" = " Pauls Wallet" 
+        "class day" = "second"
+    } 
 }
-

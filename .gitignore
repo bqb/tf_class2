@@ -1,1 +1,3 @@
-./terraform/*
+# trying to avoid 170 MB of stuff
+.terraform/*
+*.tfplan
