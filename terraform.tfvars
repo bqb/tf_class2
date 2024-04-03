@@ -7,20 +7,20 @@ rg_names = [
 ]
 
 tags = {
-  cost_center = "geomeoso research"
+  cost_center = "Pauls wallet - geomeoso research"
 }
 
 vnets = [
   {
-    name = "dev_vnet"
+    name = "gmdev_vnet"
     address = "10.10.0.0/24"
   },
   {
-    name = "staging_vnet"
+    name = "gmstaging_vnet"
     address = "10.10.1.0/24"
   },
   {
-    name = "prod_vnet"
+    name = "gmprod_vnet"
     address = "10.10.2.0/24"
   },
 ]
