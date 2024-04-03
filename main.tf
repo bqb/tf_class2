@@ -14,8 +14,8 @@ provider "azurerm" {
 }
 
 # Create the very first resource
-resource "azurerm_resource_group" "contoso_rg" {
-    name = "rary_tf_workgroup"
+resource "azurerm_resource_group" "geomeoso_rg" {
+    name = "geomeoso"
     location = "westus2"
 
     tags = {"cost center" = " Ryans Wallet" }
