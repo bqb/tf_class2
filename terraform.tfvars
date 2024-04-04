@@ -6,10 +6,6 @@ rg_names = [
 
 ]
 
-tags = {
-  cost_center = "Pauls wallet - geomeoso research"
-}
-
 vnets = [
   {
     name = "gmdev_vnet"
