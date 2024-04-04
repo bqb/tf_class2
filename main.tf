@@ -16,7 +16,7 @@ provider "azurerm" {
 
 module "connectedrg" {
     # alternately a remote git repo as desired
-    source = "./modules/geomeoso-az-connectedrg"
+    source = "./tf_modules2/modules2"
 
     rg_names = var.rg_names
     vnets = var.vnets
