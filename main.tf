@@ -1,11 +1,11 @@
 # Specifiy the provider and version
  terraform {
-#      backend "azurerm" {
-#          resource_group_name = "geomeoso_research_dev_rg"
-#          storage_account_name = "geotfstate3171"
-#          container_name      = "geotfstate31731"
-#          key                 = "terraform.tfstate"
-#      }
+      backend "azurerm" {
+          resource_group_name = "geomeoso_rg"
+          storage_account_name = "geomeoso"
+          container_name      = "geotfstate0404"
+          key                 = "geomoso.tfstate"
+      }
 
 
     required_providers {
@@ -23,7 +23,7 @@ provider "azurerm" {
 
 module "connectedrg" {
     # alternately a remote git repo as desired
-    source = "./tf_modules2/modules2"
+    source = "git@github.com:bqb/tf_modules2.git?ref=baas"
 
     rg_names = var.rg_names
     vnets = var.vnets
