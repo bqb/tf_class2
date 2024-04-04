@@ -1,6 +1,13 @@
-
 # Specifiy the provider and version
-terraform {
+ terraform {
+#      backend "azurerm" {
+#          resource_group_name = "geomeoso_research_dev_rg"
+#          storage_account_name = "geotfstate3171"
+#          container_name      = "geotfstate31731"
+#          key                 = "terraform.tfstate"
+#      }
+
+
     required_providers {
         azurerm = {
             source  = "hashicorp/azurerm"
